@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>API Web Storage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="css/efeitofade.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="nav-link text-white cursor">API Web Storage</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link cursor" id="index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link cursor" id="g1">Gastos por Categoria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link cursor" id="g2">Gastos por Data</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav><br>
+
+<div id="api" class="container-fluid">
+  <div id="home">
+    <div class="jumbotron text-center">
+      <h4>Seja-bem vindo!</h4>
+      <p>No formulário abaixo preencha com os dados de cada gasto.</p>
+    </div>
+
+    <!-- Formulario -->
+    <form id="frmCadastro">
+      <div class="form-group">
+        <label for="descricao">
+          <b>Descrição:*</b>
+        </label>
+        <input type="text" id="descricao" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gasto">
+          <b>Gasto:*</b>
+        </label>
+        <input type="number" step="0.010" id="gasto" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="data">
+          <b>Data:*</b>
+        </label>
+        <input type="date" id="data" class="form-control" min="2000-01-01" value="dd/MM/yyyy" required>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">
+          <b>Categoria:*</b>
+        </label>
+        <select id="categoria" class="form-control" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="Transferência" id="2">Transferência</option>
+          <option value="Alimentação" id="3">Alimentação</option>
+          <option value="Casa" id="4">Casa</option>
+          <option value="Receita Médica" id="5">Receita Médica</option>
+          <option value="Saude" id="6">Saude</option>
+          <option value="Transporte" id="7">Transporte</option>
+          <option value="Vestuário" id="8">Vestuário</option>
+          <option value="Outros" id="9">Outros</option>
+        </select>
+      </div>
+
+
+      <button type="submit" value="Salvar" id="btnSalvar" class="btn btn-primary mb-2" data-toggle="modal" data-target="#myModal">
+        <span class="fa fa-save span"></span> Salvar</button>
+        <button type="reset" value="Cancelar" id="btnCancelar" class="btn btn-primary mb-2">
+          <span class="fa fa-window-close span"></span> Cancelar</button>
+
+        </form>
+        <div class="table-responsive-sm tabela">
+          <table class="table table-striped" id="tblListar"></table>
+        </div>
+      </div>
+
+      <!-- Gráficos -->
+      <center>
+        <div id="grafico1">
+          <canvas width="550" height="500" id="primeiroGrafico"></canvas>
+        </div>
+
+        <div id="grafico2" class="grafico">
+          <canvas width="550" height="500" id="segundoGrafico"></canvas>
+        </div>
+      </center>
+
+
+    </div>
+
+    <br>
+    <footer class="footer py-3 bg-dark text-center">
+      <div class="container">
+        <span class="text-white span"> © Desenvolvido por <a href="https://meanmatheus.netlify.com/">Matheus</a></span>
+      </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" language="javascript" src="js/script.js"></script>
+  </body>
+
+  </html>

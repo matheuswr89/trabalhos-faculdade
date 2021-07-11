@@ -1,0 +1,11 @@
+usuario = producaoadmin
+
+senha = Produc@o#FBBM2
+
+nome banco de dados = producaodb
+
+
+produto(codigo, nome, preco)
+insumo(codigo, nome, preco)
+produção(#codigo_produto, #codigo_insumo, quantidade)
+venda(codigo, #código_produto, quantidade_vendida)

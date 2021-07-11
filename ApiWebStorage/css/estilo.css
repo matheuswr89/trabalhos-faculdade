@@ -1,0 +1,54 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	animation: fadein 2s;
+}
+img{
+	height: 30px;
+	width: 30px;
+}
+select:invalid {
+	color: gray;
+}
+.cursor{
+	cursor: pointer;
+}
+
+input:valid { border: 2px solid green; }
+.span{
+	font-size:16px;
+}
+canvas{
+	max-height: 100% !important;
+	max-width: 100% !important;
+}
+
+@media (max-width: 450px){
+	canvas{
+		max-height: 100% !important;
+		max-width: 100% !important;
+	}
+}
+
+@media (max-width: 375px){
+	canvas{
+		max-height: 100% !important;
+		max-width: 100% !important;
+	}
+}
+@media (max-width: 320px){
+	canvas{
+		max-height: 100% !important;
+		max-width: 100% !important;
+	}
+
+}
+@media (max-width: 300px){
+	canvas{
+		max-height: 100% !important;
+		max-width: 100% !important;
+	}
+
+}

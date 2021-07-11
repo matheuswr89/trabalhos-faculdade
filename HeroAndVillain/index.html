@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hero and Villans</title><meta charset="UTF-8">
+  <meta name="description" content="Pesquise por um heroi ou vilao, e vejas as suas caracteristicas.">
+  <meta name="keywords" content="heroi, vilao, dc, marvel, naruto, dragon ball, matheus william, hero, villan,animes,superhero api">
+  <meta name="author" content="Matheus Willam">
+  <meta name="robots" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="imagem/png" href="images/meufavicon.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="layout/layout.css">
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <div id="fundo-externo">
+    <div id="fundo">
+      <img src="images/imagem.jpg" />
+    </div>
+  </div>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="nav-link text-white cursor">Hero and Villans</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link cursor" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cursor" href="pages/ids-personagens.html">ID Personagens</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid" id="site">
+    <div class="container text-center">
+      <h4>Digite no campo abaixo o nome de um personagem qualquer para ver as suas características.</h4>
+    </div>
+  </div>
+
+  <section id="site">
+    <div id="demo" class="body-content">
+      <center>
+        <div class="input-group mb-3 container">
+          <input type="text" class="form-control" name="nome" id="nomeHeroi" placeholder="Search hero or villain">
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="submit" onclick="consultar()">Buscar</button>
+          </div>
+      </center>
+
+      <div class="container">
+        <div id="element"></div>
+        <div id="pesquisa"></div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-inicio" class=" py-3 bg-dark text-center">
+    <div class="container">
+      <span class="text-white span">Copyright &copy; 2018 - All Rights Reserved -
+        <a href="https://meanmatheus.netlify.com/">Matheus William
+        </a>
+      </span>
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPTS -->
+  <script type="text/javascript" language="javascript" src="js/herois.js"></script>
+  <script type="text/javascript" language="javascript" src="js/top.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script type="text/javascript" language="javascript" src="js/adptar.js"></script>
+</body>
+
+</html>

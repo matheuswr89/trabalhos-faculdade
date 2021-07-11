@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabalho Páginas Web</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a class="link-navbar" href="index.html">Sobre a Marvel</a></li>
+      <li><a class="link-navbar" href="personagens.html">Personagens</a></li>
+      <li><a class="link-navbar" href="comics.html">Comics</a></li>
+    </ul>
+  </nav>
+  <div class="introucao">
+    <div>
+      <img src="images/personagens.png">
+      <p>A Marvel conta com diversos personagens bem conhecidos como: Homem-Aranha, Homem-Formiga, Capitão América, Capitã Marvel, Vespa, Demolidor, Deadpool, Justiceiro, Homem de Ferro, etc. E os antagonistas como: Thanos, Duende Verde, Caveira Vermelha, Doutor Destino, Rei do Crime, Magneto e Loki.</p>
+    </div>
+    <p>Pesquise por algum personagem para saber mais obre eles:</p>
+
+  </div>
+  <div class="em-breve">
+    <div class="busca">
+      <input type="text">
+      <button onclick="buscaPersonagem()"><a>Buscar</a></button>
+    </div>  
+  </div>
+  <div id="message"></div>
+  <div id="card"></div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2 id="title"></h2>
+        <h2 id="carregando"></h2>
+      </div>
+      <div class="modal-body">
+        <h2 id="carregando"></h2>
+        <div class="into-personagem">
+          <div id="imagem-personagem"></div>
+          <p id="descricao"></p>
+        </div>
+        <div id="botao-visit"></div>
+        <div id="relacionados"></div>
+        <div id="comics-relacionado"></div>
+        <div id="seriesrelacionados"></div>
+        <div id="series-relacionado"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Desenvolvido por Matheus William - 2020</p>
+  </footer>
+  <script type="text/javascript" src="js/character.js"></script>
+</body>
+</html>
