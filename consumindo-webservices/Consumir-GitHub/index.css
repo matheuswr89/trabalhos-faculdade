@@ -1,0 +1,19 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+
+a{
+  text-decoration: none;
+}
+.user {
+  margin-left: 40px;
+  width: 40%;
+  cursor: pointer;
+}
+.user:hover {
+  background-color: rgba(94, 68, 20, 0.322);
+}
+.repos {
+  margin-left: 80px;
+}

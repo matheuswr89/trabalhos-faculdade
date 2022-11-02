@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade XML</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <div class="form">
+      <input type="text" placeholder="Forneça o nome da cidade">
+      <button class="pesquisar">Pesquisar</button>
+    </div>
+    <div class="result">
+      <div><h2>Digite o nome de uma cidade para ver a previsão do tempo.</h2></div>
+      <div id="map" class="map"></div>
+    </div>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=iniciaMapa&v=weekly&channel=2"
+      async
+    ></script>
+    <script src="index.js"></script>
+    </body>
+</html>

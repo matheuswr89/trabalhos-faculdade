@@ -1,0 +1,11 @@
+{
+  "name": "revisao-sockets",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Matheus William",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socketio": "^1.0.0"
+  }
+}

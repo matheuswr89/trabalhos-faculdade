@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  padding: 30px;
+}
+
+input,
+button.pesquisar {
+  padding: 10px;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+input {
+  width: 210px;
+}
+
+button {
+  background-color: #0080cd;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+button:hover {
+  filter: brightness(0.8);
+}
+
+.map {
+  display: none;
+  height: 200px;
+  width: 45vw;
+  font-size: 10px;
+  margin-left: 30px;
+}
+
+.result {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 80vw;
+  padding: 30px;
+  border-radius: 10px;
+  flex-direction: row;
+}
+
+.temperatura {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.temperatura .temp_atual {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.temperatura .temp_dives .tooltip {
+  display: grid;
+  grid-row: auto;
+  grid-template-areas:
+    "hot hot_icon"
+    "cold cold_icon";
+  align-items: center;
+}
+.temperatura .temp_dives .tooltip p:nth-child(1) {
+  grid-area: "hot";
+}
+.temperatura .temp_dives .tooltip p:nth-child(2) {
+  grid-area: "cold";
+}
+.temperatura .temp_dives .tooltip img:nth-child(1) {
+  grid-area: "hot_icon";
+}
+.temperatura .temp_dives .tooltip img:nth-child(2) {
+  grid-area: "cold_icon";
+}
+
+.temperatura .temp_dives p {
+  font-size: 20px;
+  line-height: 30px;
+}
+.temperatura .temp_dives img {
+  width: 30px;
+  line-height: 30px;
+  height: 30px;
+}
+
+.outros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-transform: capitalize;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .temperatura {
+    width: auto;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .result {
+    flex-direction: column;
+  }
+  .temp_atual{
+    margin-right: 0;
+  }
+  .map {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
